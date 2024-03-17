@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './styles/index.css'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
   // State for managing form inputs and existing accounts
@@ -45,9 +46,23 @@ const Signup = () => {
 
   return (
     <>
-      <div>
-        <h1>Bank Account Management</h1>
-        <form onSubmit={handleSubmit}>
+      <nav className="navbar">
+        <div className="left-links">
+          <Link to="/business">Business</Link>
+          <Link to="/pricing">Pricing</Link>
+          <Link to="/features">Features</Link>
+          <Link to="/blog">Blog</Link>
+        </div>
+        <div className="right-links">
+          <button>Login</button>
+          <button>Signup</button>
+        </div>
+      </nav>
+
+      <div className='main'>
+        <h1 className='title'>Bank Account Management</h1>
+        <p className='information-text'>Please complete the information below</p>
+        <form onSubmit={handleSubmit} className='form'>
           <label>
             First Name:
             <input
@@ -56,7 +71,7 @@ const Signup = () => {
               value={formData.firstName}
               onChange={handleChange}
               required
-              className="text-red-400"
+              className="input-text"
             />
           </label>
           <label>
@@ -67,6 +82,7 @@ const Signup = () => {
               value={formData.lastName}
               onChange={handleChange}
               required
+              className='input-text'
             />
           </label>
           <label>
@@ -77,6 +93,7 @@ const Signup = () => {
               value={formData.dateOfBirth}
               onChange={handleChange}
               required
+              className='input-text'
             />
           </label>
           <label>
@@ -87,19 +104,23 @@ const Signup = () => {
               value={formData.salary}
               onChange={handleChange}
               required
+              className='input-text'
+              id='salary'
             />
           </label>
           <label>
-            Account Number:
+            Acc Number :
             <input
               type="text"
               name="accountNumber"
               value={formData.accountNumber}
               onChange={handleChange}
               required
+              className='input-text'
+              id='acc-number'
             />
           </label>
-          <button type="submit">Submit</button>
+          <button type="submit" className='submit'>Submit</button>
         </form>
         {/* TODO: Display existing accounts and allow modification */}
       </div>

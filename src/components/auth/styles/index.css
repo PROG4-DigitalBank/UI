@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.left-links, .right-links, .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-links, .right-links{
+    gap: 2rem;
+}
+
+.navbar{
+    gap: 50rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+
+.information-text{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-text{
+    width: 25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 2rem;
+}
+
+#salary{
+    margin-left: 5rem;
+}
+
+.submit{
+    width: 10rem;
+    padding: 0.75rem 0.75rem;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(190, 28, 28);
+    font-size: medium;
+    margin-left: 7rem;
+}
+
+.main{
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    border: black solid 0.5px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    padding: 2rem 10rem 2rem 10rem;
+}
