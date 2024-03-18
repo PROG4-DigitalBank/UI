@@ -12,6 +12,7 @@
   background-image: radial-gradient(
       at 47% 33%,
       hsl(352.72, 98%, 41%) 0,
+      hsl(352.72, 98%, 41%) 0,
       transparent 59%
     ),
     radial-gradient(at 82% 65%, hsl(183.16, 0%, 61%) 0, transparent 55%);
@@ -30,24 +31,8 @@
   background-color: #fff;
   color: black;
   cursor: pointer;
-  background-color: #d0021b;
-  color: white;
 }
 
-<<<<<<< HEAD
-.up-button:hover,
-.submit:hover {
-  animation: buttonZoomIn 1s ease;
-}
-
-#signup-button {
-  background-color: white;
-  color: black;
-  border: white solid 2px;
-}
-
-=======
->>>>>>> c85827c (chore: resolving package.json conflict)
 .link {
   color: white;
   position: relative;
@@ -130,6 +115,7 @@
   border-radius: 10px;
   color: white;
   background-color: #d0021b;
+  background-color: #D0021B;
   font-size: medium;
   margin-left: 7rem;
 }
@@ -145,6 +131,9 @@
   width: max-content;
   height: max-content;
   padding: 2rem 10rem 2rem 10rem;
+  backdrop-filter: blur(21px) saturate(118%);
+  -webkit-backdrop-filter: blur(21px) saturate(118%);
+  background-color: rgba(255, 255, 255, 0.69);
   backdrop-filter: blur(21px) saturate(118%);
   -webkit-backdrop-filter: blur(21px) saturate(118%);
   background-color: rgba(255, 255, 255, 0.69);
