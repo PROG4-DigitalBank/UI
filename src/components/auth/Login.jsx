@@ -1,12 +1,5 @@
-
-
-const Login = ()=> {
-    return(
-        <>
-
-        </>
-    );
-
+const Login = () => {
+  return <></>
 }
 
-export default Login;
+export default Login

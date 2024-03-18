@@ -49,14 +49,22 @@ const Signup = () => {
       <div className="all">
         <nav className="navbar">
           <div className="left-links">
-            <Link to="/business" className='link'>Business</Link>
-            <Link to="/pricing" className='link'>Pricing</Link>
-            <Link to="/features" className='link'>Features</Link>
-            <Link to="/blog" className='link'>Blog</Link>
+            <Link to="/business" className="link">
+              Business
+            </Link>
+            <Link to="/pricing" className="link">
+              Pricing
+            </Link>
+            <Link to="/features" className="link">
+              Features
+            </Link>
+            <Link to="/blog" className="link">
+              Blog
+            </Link>
           </div>
           <div className="right-links">
-            <button className='up-button'>Login</button>
-            <button className='up-button'>Signup</button>
+            <button className="up-button">Login</button>
+            <button className="up-button">Signup</button>
           </div>
         </nav>
 
