@@ -34,6 +34,10 @@
   color: white;
 }
 
+.up-button:hover, .submit:hover{
+  animation: buttonZoomIn 1s ease;
+}
+
 #signup-button{
   background-color: white;
   color: black;
@@ -73,6 +77,17 @@
   }
   
 }
+
+@keyframes buttonZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
 
 .left-links,
 .right-links {
