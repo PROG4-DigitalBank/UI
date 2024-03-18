@@ -3,18 +3,18 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .all {
+  height: 100vh;
   background-color: #000000;
   background-image: radial-gradient(
       at 47% 33%,
-      hsl(180, 0%, 100%) 0,
+      hsl(352.72, 98%, 41%) 0,
       transparent 59%
     ),
-    radial-gradient(at 47% 33%, hsl(180, 0%, 50%) 0, transparent 59%),
-    radial-gradient(at 82% 65%, hsl(353.33, 66%, 8%) 0, transparent 55%);
-  height: 100vh;
+    radial-gradient(at 82% 65%, hsl(183.16, 0%, 61%) 0, transparent 55%);
 }
 .left-links,
 .right-links,
@@ -30,10 +30,48 @@
   background-color: #fff;
   color: black;
   cursor: pointer;
+  background-color: #D0021B;
+  color: white;
+}
+
+#signup-button{
+  background-color: white;
+  color: black;
+  border: white solid 2px;
+
 }
 
 .link {
   color: white;
+  position: relative;
+  animation: slideIn 1s ease;
+}
+
+.link::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: -0.5rem;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before{
+  transform: scaleX(1);
+}
+
+@keyframes slideIn {
+  0%{
+    transform: translateY(-100%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+  
 }
 
 .left-links,
@@ -76,7 +114,7 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: black;
+  background-color: #D0021B;
   font-size: medium;
   margin-left: 7rem;
 }
@@ -92,9 +130,9 @@
   width: max-content;
   height: max-content;
   padding: 2rem 10rem 2rem 10rem;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(21px) saturate(118%);
+  -webkit-backdrop-filter: blur(21px) saturate(118%);
+  background-color: rgba(255, 255, 255, 0.69);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
