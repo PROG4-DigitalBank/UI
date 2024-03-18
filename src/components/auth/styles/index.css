@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.up-button{
+  padding: 0.5rem 2rem 0.5rem 2rem ;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+}
+
+.link{
+  color: white;
 }
 
 .left-links,
@@ -64,7 +77,7 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #4a0d14;
+  background-color: black;
   font-size: medium;
   margin-left: 7rem;
 }
@@ -82,7 +95,7 @@
   padding: 2rem 10rem 2rem 10rem;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
