@@ -1,21 +1,23 @@
+
 import React, { useState } from 'react'
 import axios from 'axios'
 import './styles/withdraw.css'
 import image from './images/Study.jpg'
 import { Link } from 'react-router-dom'
 
+
 const WithdrawMoney = () => {
-  const [account, setAccount] = useState('')
-  const [amount, setAmount] = useState('')
-  const [date, setDate] = useState('')
-  const [time, setTime] = useState('')
-  const [message, setMessage] = useState('')
+  const [account, setAccount] = useState('');
+  const [amount, setAmount] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     try {
       // Sending request to the backend to check if the withdrawal is authorized
-      const response = await axios.post('url from backend', {
+      const response = await axios.post('url for withdrawal authorization', {
         account,
         amount,
         date,
@@ -35,26 +37,28 @@ const WithdrawMoney = () => {
     // Handle activation of overdraft feature
     try {
       // Send request to backend to activate overdraft feature for the account
+
+      });
+      
+
+  const handleActivateOverdraft = async () => {
+    try {
+
       const response = await axios.post('url for overdraft activation', {
         account,
-      })
+      });
       // Handle success or error response from the backend
     } catch (error) {
-      console.error('Error during overdraft activation:', error)
+      console.error('Error during overdraft activation:', error);
       // Error handling
     }
-  }
-
-  const calculateCreditAuthorized = (monthlySalary) => {
-    // Calculate credit authorized as one-third of monthly salary
-    return monthlySalary / 3
-  }
+  };
 
   return (
     <>
       <nav className="navbar">
         <div className="left-links">
-          <Link to="/business text-pop-up-top" className="link">
+          <Link to="/business" className="link">
             Business
           </Link>
           <Link to="/pricing" className="link">
@@ -126,7 +130,6 @@ const WithdrawMoney = () => {
             Activate Overdraft
           </button>
         </div>
-
         <div>
           <img src={image} alt="" className="image" />
         </div>
@@ -136,3 +139,6 @@ const WithdrawMoney = () => {
 }
 
 export default WithdrawMoney
+ 
+
+
