@@ -51,7 +51,7 @@
   animation: slideIn 1s ease;
 }
 
-.link::before {
+.link::before  {
   content: '';
   position: absolute;
   width: 100%;
@@ -75,7 +75,6 @@
   100% {
     transform: translateY(0);
   }
-  
 }
 
 @keyframes buttonZoomIn {
@@ -86,8 +85,6 @@
     transform: scale(1.1);
   }
 }
-
-
 
 .left-links,
 .right-links {
