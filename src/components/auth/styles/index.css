@@ -51,7 +51,7 @@
   animation: slideIn 1s ease;
 }
 
-.link::before  {
+.link::before {
   content: '';
   position: absolute;
   width: 100%;
