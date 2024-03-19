@@ -33,12 +33,7 @@ const WithdrawMoney = () => {
     }
   }
 
-  const handleActivateOverdraft = async () => {
-    // Handle activation of overdraft feature
-    try {
-      // Send request to backend to activate overdraft feature for the account
-
-      });
+  
       
 
   const handleActivateOverdraft = async () => {
