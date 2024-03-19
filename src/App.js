@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/wmoney" element={<WithdrawMoney />} 
+          <Route path="/wmoney" element={<WithdrawMoney />} /
         </Routes>
       </div>
     </Router>
