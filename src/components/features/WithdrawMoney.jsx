@@ -117,7 +117,7 @@ const WithdrawMoney = () => {
                 id="time"
               />
             </label>
-            <button type="submit" className="withdraw-button" id='red-button'>
+            <button type="submit" className="withdraw-button" id="red-button">
               Withdraw
             </button>
           </form>
