@@ -50,6 +50,7 @@ const Signup = () => {
         <nav className="navbar">
           <div className="left-links">
             <Link to="/business text-pop-up-top" className="link">
+            <Link to="/business text-pop-up-top" className="link">
               Business
             </Link>
             <Link to="/pricing" className="link">

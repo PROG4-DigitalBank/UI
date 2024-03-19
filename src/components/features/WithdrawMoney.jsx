@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import axios from 'axios'
 import './styles/withdraw.css'
@@ -13,14 +12,13 @@ const WithdrawMoney = () => {
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (event) => {
-    event.preventDefault(
+    event.preventDefault()
     try {
       // Sending request to the backend to check if the withdrawal is authorized
       const response = await axios.post('url from backend', {
         account,
         amount,
         date,
-
         time,
       })
 
@@ -32,19 +30,11 @@ const WithdrawMoney = () => {
       setMessage('An error occurred while processing your request.')
     }
   }
-        time
-      });
 
-      // Retrieving success or error message from the backend
-      setMessage(response.data.message);
-    } catch (error) {
-      console.error('Error during request:', error);
-      // Error handling
-      setMessage('An error occurred while processing your request.');
-    }
-  };
-
-
+  const handleActivateOverdraft = async () => {
+    // Handle activation of overdraft feature
+    try {
+      // Send request to backend to activate overdraft feature for the account
       const response = await axios.post('url for overdraft activation', {
         account,
       })
@@ -127,7 +117,7 @@ const WithdrawMoney = () => {
                 id="time"
               />
             </label>
-            <button type="submit" className="withdraw-button" id='red-button'>
+            <button type="submit" className="withdraw-button" id="red-button">
               Withdraw
             </button>
           </form>
@@ -146,5 +136,3 @@ const WithdrawMoney = () => {
 }
 
 export default WithdrawMoney
-
-     
