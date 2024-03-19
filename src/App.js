@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
 import WithdrawMoney from './components/features/WithdrawMoney'
-import WithdrawMoney from './components/features/WithdrawMoney'
 
 function App() {
   return (
