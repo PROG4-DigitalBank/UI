@@ -13,7 +13,7 @@
   background-image: radial-gradient(
       at 47% 33%,
       hsl(352.72, 98%, 41%) 0,
-      hsl(352.72, 98%, 41%) 0,
+      hsl(352.72, 98%, 41%) 0
     ),
     radial-gradient(at 82% 65%, hsl(183.16, 0%, 61%) 0, transparent 55%);
 }
@@ -127,9 +127,7 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #D0021B;
-
-
+  background-color: #d0021b;
 }
 
 .main {

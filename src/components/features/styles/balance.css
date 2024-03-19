@@ -1,0 +1,32 @@
+.balance-inquiry-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+.balance-inquiry-container > h2 {
+  background-color: #fff;
+  color: black;
+}
+
+.balance-item {
+  margin: 10px 0;
+  background-color: white;
+  color: black;
+}
+
+.date-label {
+  display: block;
+  margin-top: 20px;
+  color: black;
+  background-color: #fff;
+}

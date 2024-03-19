@@ -4,9 +4,8 @@ import './components/auth/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
+import BalanceInquiry from './components/features/BalanceInquiry'
 import WithdrawMoney from './components/features/WithdrawMoney'
-import WithdrawMoney from './components/features/WithdrawMoney'
-
 function App() {
   return (
     <Router>
@@ -15,6 +14,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/wmoney" element={<WithdrawMoney />} />
+          <Route path="/balance" element={<BalanceInquiry />} />
         </Routes>
       </div>
     </Router>
