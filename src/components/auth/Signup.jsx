@@ -64,7 +64,9 @@ const Signup = () => {
           </div>
           <div className="right-links">
             <button className="up-button">Login</button>
-            <button className="up-button" id='signup-button'>Signup</button>
+            <button className="up-button" id="signup-button">
+              Signup
+            </button>
           </div>
         </nav>
 
