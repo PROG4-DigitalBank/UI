@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .all {
@@ -12,7 +13,7 @@
   background-image: radial-gradient(
       at 47% 33%,
       hsl(352.72, 98%, 41%) 0,
-      hsl(352.72, 98%, 41%) 0,
+      hsl(352.72, 98%, 41%) 0
     ),
     radial-gradient(at 82% 65%, hsl(183.16, 0%, 61%) 0, transparent 55%);
 }
@@ -126,9 +127,7 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #D0021B;
-
-
+  background-color: #d0021b;
 }
 
 .main {
@@ -148,5 +147,6 @@
   backdrop-filter: blur(21px) saturate(118%);
   -webkit-backdrop-filter: blur(21px) saturate(118%);
   background-color: rgba(255, 255, 255, 0.69);
-
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './styles/withdraw.css';
-import image from './images/Study.jpg';
-import { Link } from 'react-router-dom';
+
+import React, { useState } from 'react'
+import axios from 'axios'
+import './styles/withdraw.css'
+import image from './images/Study.jpg'
+import { Link } from 'react-router-dom'
+
 
 const WithdrawMoney = () => {
   const [account, setAccount] = useState('');
@@ -20,18 +22,23 @@ const WithdrawMoney = () => {
         amount,
         date,
         time,
-      });
+      })
+
       // Retrieving success or error message from the backend
-      setMessage(response.data.message);
+      setMessage(response.data.message)
     } catch (error) {
-      console.error('Error during request:', error);
+      console.error('Error during request:', error)
       // Error handling
-      setMessage('An error occurred while processing your request.');
+      setMessage('An error occurred while processing your request.')
     }
-  };
+  }
+
+  
+      
 
   const handleActivateOverdraft = async () => {
     try {
+
       const response = await axios.post('url for overdraft activation', {
         account,
       });
@@ -109,7 +116,7 @@ const WithdrawMoney = () => {
                 id="time"
               />
             </label>
-            <button type="submit" className="withdraw-button" id='red-button'>
+            <button type="submit" className="withdraw-button" id="red-button">
               Withdraw
             </button>
           </form>
@@ -123,7 +130,10 @@ const WithdrawMoney = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default WithdrawMoney;
+export default WithdrawMoney
+ 
+
+
