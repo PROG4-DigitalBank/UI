@@ -34,6 +34,7 @@
   color: white;
 }
 
+<<<<<<< HEAD
 .up-button:hover,
 .submit:hover {
   animation: buttonZoomIn 1s ease;
@@ -45,6 +46,8 @@
   border: white solid 2px;
 }
 
+=======
+>>>>>>> c85827c (chore: resolving package.json conflict)
 .link {
   color: white;
   position: relative;
