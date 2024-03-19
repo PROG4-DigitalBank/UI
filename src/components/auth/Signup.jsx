@@ -64,14 +64,16 @@ const Signup = () => {
           </div>
           <div className="right-links">
             <button className="up-button">Login</button>
-            <button className="up-button" id='signup-button'>Signup</button>
+            <button className="up-button" id="signup-button">
+              Signup
+            </button>
           </div>
         </nav>
 
         <div className="main">
           <h1 className="title">Bank Account Management</h1>
           <p className="information-text">
-          Please enter your details to continue subscription
+            Please enter your details to continue subscription
           </p>
           <form onSubmit={handleSubmit} className="form">
             <label>

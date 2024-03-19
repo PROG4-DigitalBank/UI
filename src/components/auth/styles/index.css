@@ -30,19 +30,19 @@
   background-color: #fff;
   color: black;
   cursor: pointer;
-  background-color: #D0021B;
+  background-color: #d0021b;
   color: white;
 }
 
-.up-button:hover, .submit:hover{
+.up-button:hover,
+.submit:hover {
   animation: buttonZoomIn 1s ease;
 }
 
-#signup-button{
+#signup-button {
   background-color: white;
   color: black;
   border: white solid 2px;
-
 }
 
 .link {
@@ -51,7 +51,7 @@
   animation: slideIn 1s ease;
 }
 
-.link::before{
+.link::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -63,19 +63,18 @@
   transition: transform 0.3s ease;
 }
 
-.link:hover::before{
+.link:hover::before {
   transform: scaleX(1);
 }
 
 @keyframes slideIn {
-  0%{
+  0% {
     transform: translateY(-100%);
   }
 
-  100%{
+  100% {
     transform: translateY(0);
   }
-  
 }
 
 @keyframes buttonZoomIn {
@@ -86,8 +85,6 @@
     transform: scale(1.1);
   }
 }
-
-
 
 .left-links,
 .right-links {
@@ -129,7 +126,7 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #D0021B;
+  background-color: #d0021b;
   font-size: medium;
   margin-left: 7rem;
 }
