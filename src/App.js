@@ -6,6 +6,7 @@ import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
 import BalanceInquiry from './components/features/BalanceInquiry'
 import WithdrawMoney from './components/features/WithdrawMoney'
+import BalanceReplenishment from './components/features/BalanceReplenishment'
 function App() {
   return (
     <Router>
@@ -15,6 +16,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/wmoney" element={<WithdrawMoney />} />
           <Route path="/balance" element={<BalanceInquiry />} />
+          <Route path="/balancerep" element={<BalanceReplenishment />} />
+        
         </Routes>
       </div>
     </Router>
