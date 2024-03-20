@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .all {
@@ -12,7 +13,9 @@
   background-image: radial-gradient(
       at 47% 33%,
       hsl(352.72, 98%, 41%) 0,
-      transparent 59%
+      hsl(352.72, 98%, 41%) 0
+    
+
     ),
     radial-gradient(at 82% 65%, hsl(183.16, 0%, 61%) 0, transparent 55%);
 }
