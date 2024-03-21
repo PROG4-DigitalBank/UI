@@ -2,6 +2,7 @@ import './App.css'
 import './components/auth/Signup'
 import './components/auth/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Homepage from './components/home/Homepage'
 import Signup from './components/auth/Signup'
 import Login from './components/auth/Login'
 import BalanceInquiry from './components/features/BalanceInquiry'
@@ -17,7 +18,7 @@ function App() {
           <Route path="/wmoney" element={<WithdrawMoney />} />
           <Route path="/balance" element={<BalanceInquiry />} />
           <Route path="/balancerep" element={<BalanceReplenishment />} />
-        
+          <Route path="/" element={<Homepage />} />
         </Routes>
       </div>
     </Router>

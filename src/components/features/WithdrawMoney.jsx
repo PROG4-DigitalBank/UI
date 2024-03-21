@@ -1,20 +1,20 @@
-
 import React, { useState } from 'react'
 import axios from 'axios'
 import './styles/withdraw.css'
 import image from './images/Study.jpg'
 import { Link } from 'react-router-dom'
 
+//F2: retrait d'argent
 
 const WithdrawMoney = () => {
-  const [account, setAccount] = useState('');
-  const [amount, setAmount] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [message, setMessage] = useState('');
+  const [account, setAccount] = useState('')
+  const [amount, setAmount] = useState('')
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
       // Sending request to the backend to check if the withdrawal is authorized
       const response = await axios.post('url for withdrawal authorization', {
@@ -33,21 +33,17 @@ const WithdrawMoney = () => {
     }
   }
 
-  
-      
-
   const handleActivateOverdraft = async () => {
     try {
-
       const response = await axios.post('url for overdraft activation', {
         account,
-      });
+      })
       // Handle success or error response from the backend
     } catch (error) {
-      console.error('Error during overdraft activation:', error);
+      console.error('Error during overdraft activation:', error)
       // Error handling
     }
-  };
+  }
 
   return (
     <>
@@ -134,6 +130,3 @@ const WithdrawMoney = () => {
 }
 
 export default WithdrawMoney
- 
-
-
