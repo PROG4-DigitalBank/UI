@@ -29,28 +29,34 @@ function Homepage() {
         </div>
 
         <div className="buttons-container">
-          <button className='try' >Login</button>
-          <button className='learn' >Sign Up</button>
+          <button className="try">Login</button>
+          <button className="learn">Sign Up</button>
         </div>
       </div>
 
       <main>
         <div>
-          <div className='side-text'>
-            <h1>One <i>app</i>, all things money</h1>
+          <div className="side-text">
+            <h1>
+              One <i>app</i>, all things money
+            </h1>
             <p>
               From easily money management to travel perks and investments. Open
               your account in a flash
             </p>
           </div>
-          <div className='main-buttons'>
-            <button className='try' id='try'>Try Now</button>
-            <button className='learn' id='learn'>Learn More</button>
+          <div className="main-buttons">
+            <button className="try" id="try">
+              Try Now
+            </button>
+            <button className="learn" id="learn">
+              Learn More
+            </button>
           </div>
         </div>
 
         <div>
-            <img src={side} alt="" className='side-image' />
+          <img src={side} alt="" className="side-image" />
         </div>
       </main>
     </>

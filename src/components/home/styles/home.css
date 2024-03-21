@@ -1,6 +1,5 @@
 .nav-links,
-.nav
- {
+.nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,8 +35,6 @@
   margin-top: 2rem;
 }
 
-
-
 .buttons-container {
   margin-left: 2rem;
 }
@@ -69,50 +66,53 @@
   }
 }
 
-main{
-    display: flex;
+main {
+  display: flex;
   flex-direction: row;
   align-items: center;
-    margin-top: 7rem;
-    justify-content: center;
-    gap: 5rem;
+  margin-top: 7rem;
+  justify-content: center;
+  gap: 5rem;
 }
 
-.side-text{
-    display: flex;
-    flex-direction: column;
-    width: 30rem;
-    gap: 3rem;
+.side-text {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  gap: 3rem;
 }
 
-.main-buttons{
-    margin-top: 3rem;
+.main-buttons {
+  margin-top: 3rem;
 }
 
-.try, .learn{
-    padding: 0.5rem 2rem;
-    border-radius: 8px;
-    margin-left: 2rem;
-    cursor: pointer;
+.try,
+.learn {
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  margin-left: 2rem;
+  cursor: pointer;
 }
 
-#try, #learn{
-    padding: 1rem 2rem;
+#try,
+#learn {
+  padding: 1rem 2rem;
 }
 
-.try:hover, .learn:hover{
-    animation: buttonZoom 1.5s ease;
+.try:hover,
+.learn:hover {
+  animation: buttonZoom 1.5s ease;
 }
 
-.try{
-    border: white solid 2px;
+.try {
+  border: white solid 2px;
 }
 
-.learn{
-    background-color: #C499F3;
-    border: #C499F3 solid ;
+.learn {
+  background-color: #c499f3;
+  border: #c499f3 solid;
 }
 
-i{
-    color: #C499F3;
+i {
+  color: #c499f3;
 }
