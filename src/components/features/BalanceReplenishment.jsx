@@ -76,4 +76,4 @@ function BalanceReplenishment() {
   )
 }
 
-return BalanceReplenishment;
+export default BalanceReplenishment;
