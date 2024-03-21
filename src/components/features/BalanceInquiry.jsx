@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './styles/balance.css'
 import { Link } from 'react-router-dom'
-
 //F3: Consulatation de solde
 
 const BalanceInquiry = () => {

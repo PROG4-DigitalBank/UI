@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import axios from 'axios'
 import './styles/withdraw.css'
@@ -5,6 +6,7 @@ import image from './images/Study.jpg'
 import { Link } from 'react-router-dom'
 
 //F2: retrait d'argent
+
 
 const WithdrawMoney = () => {
   const [account, setAccount] = useState('')
@@ -35,6 +37,7 @@ const WithdrawMoney = () => {
 
   const handleActivateOverdraft = async () => {
     try {
+
       const response = await axios.post('url for overdraft activation', {
         account,
       })
@@ -130,3 +133,5 @@ const WithdrawMoney = () => {
 }
 
 export default WithdrawMoney
+ 
+

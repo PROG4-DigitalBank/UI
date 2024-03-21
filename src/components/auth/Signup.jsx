@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import './styles/index.css'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import './styles/index.css';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   // State for managing form inputs and existing accounts
@@ -10,13 +10,13 @@ const Signup = () => {
     dateOfBirth: '',
     salary: '',
     accountNumber: '',
-  })
+  });
 
-  const [existingAccounts, setExistingAccounts] = useState([])
+  const [existingAccounts, setExistingAccounts] = useState([]);
 
   // Function to handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     // TODO: Send formData to backend for processing (create or update account)
     // Reset form after submission
     setFormData({
@@ -25,24 +25,24 @@ const Signup = () => {
       dateOfBirth: '',
       salary: '',
       accountNumber: '',
-    })
-  }
+    });
+  };
 
   // Function to handle input changes
   const handleChange = (event) => {
-    const { name, value } = event.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   // Function to fetch existing accounts from backend
   const fetchExistingAccounts = () => {
     // TODO: Fetch existing accounts from backend and update state
-  }
+  };
 
   // useEffect to fetch existing accounts on component mount
   useEffect(() => {
-    fetchExistingAccounts()
-  }, [])
+    fetchExistingAccounts();
+  }, []);
 
   return (
     <div className="all">
@@ -142,4 +142,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Signup;
