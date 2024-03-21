@@ -37,7 +37,7 @@ function Homepage() {
       <main>
         <div>
           <div className='side-text'>
-            <h1>One app, all things money</h1>
+            <h1>One <i>app</i>, all things money</h1>
             <p>
               From easily money management to travel perks and investments. Open
               your account in a flash

@@ -82,11 +82,11 @@ main{
     display: flex;
     flex-direction: column;
     width: 30rem;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .main-buttons{
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .try, .learn{
@@ -111,4 +111,8 @@ main{
 .learn{
     background-color: #C499F3;
     border: #C499F3 solid ;
+}
+
+i{
+    color: #C499F3;
 }
