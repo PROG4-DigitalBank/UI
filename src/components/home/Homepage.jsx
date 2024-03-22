@@ -11,7 +11,7 @@ function Homepage() {
           <Link to="/">
             <h1 className="logo">Digital Bank</h1>
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/account" className="link-">
             Account Info
           </Link>
           <Link to="/" className="link-">

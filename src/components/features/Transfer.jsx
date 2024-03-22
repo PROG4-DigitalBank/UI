@@ -1,10 +1,7 @@
-import React from "react";
+import React from 'react'
 
-const Transfer = ()=>{
-    return(
-        <>
-        </>
-    );
+const Transfer = () => {
+  return <></>
 }
 
-export default Transfer;
+export default Transfer
