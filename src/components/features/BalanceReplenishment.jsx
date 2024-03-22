@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 
 // F4: Approvisionnement de solde
@@ -76,4 +75,4 @@ function BalanceReplenishment() {
   )
 }
 
-export default BalanceReplenishment;
+export default BalanceReplenishment

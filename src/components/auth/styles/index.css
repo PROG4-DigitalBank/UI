@@ -127,7 +127,8 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #d0021b;
+  background-color: #c499f3;
+  border:#c499f3 solid;
 }
 
 .main {
