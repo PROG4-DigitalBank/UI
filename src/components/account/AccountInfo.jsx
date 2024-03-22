@@ -95,16 +95,6 @@ const AccountInfo = () => {
                 id="salary"
               />
             </label>
-            <label>
-              Account N* :
-              <input
-                type="text"
-                name="accountNumber"
-                required
-                className="input-text"
-                id="acc-number"
-              />
-            </label>
             <button type="submit" className="submit">
               Save Changes
             </button>
