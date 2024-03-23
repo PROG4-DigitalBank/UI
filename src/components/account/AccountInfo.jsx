@@ -51,9 +51,9 @@ const AccountInfo = () => {
           </div>
 
           <div className="info">
-            <p>Birth Date : </p>
-            <p>Net Month salary : </p>
-            <p>Account Number : </p>
+            <p>Birth Date </p>
+            <p>Net Month salary </p>
+            <p>Account Number </p>
           </div>
         </div>
 

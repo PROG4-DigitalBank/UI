@@ -8,6 +8,12 @@
   flex-direction: row;
   align-items: center;
   gap: 5rem;
+  border:  #e4d3f6 solid 2px;
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  padding-right: 5rem;
+  border-radius: 10px;
 }
 
 .profile-info {
