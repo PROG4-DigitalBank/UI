@@ -36,7 +36,6 @@ const AccountInfo = () => {
           <button className="learn">Sign Up</button>
         </div>
       </div>
-
       <div className="body-container">
         <div className="main-account-container">
           <div className="profile-info">
@@ -68,7 +67,6 @@ const AccountInfo = () => {
                 className="input-text"
               />
             </label>
-
             <label>
               Last Name:
               <input

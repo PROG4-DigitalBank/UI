@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/transfer.css'
@@ -136,4 +137,5 @@ const Transfer = () => {
   )
 }
 
-export default Transfer
+export default Transfer;
+
