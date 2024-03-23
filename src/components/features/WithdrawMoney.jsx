@@ -53,7 +53,7 @@ const WithdrawMoney = () => {
             <h1 className="logo">Digital Bank</h1>
           </Link>
           <Link to="/" className="link-">
-           Home
+            Home
           </Link>
           <Link to="/account" className="link-">
             Account Info
@@ -77,7 +77,6 @@ const WithdrawMoney = () => {
           <button className="learn">Sign Up</button>
         </div>
       </div>
-
 
       <div className="main-container">
         <div className="title-withdraw">

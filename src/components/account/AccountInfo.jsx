@@ -17,16 +17,16 @@ const AccountInfo = () => {
           <Link to="/account" className="link-">
             Account Info
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/wmoney" className="link-">
             Withdraw
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/balance" className="link-">
             Balance
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/balance-rep" className="link-">
             Deposit
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/transfer" className="link-">
             Transfer
           </Link>
         </div>
@@ -37,7 +37,7 @@ const AccountInfo = () => {
         </div>
       </div>
 
-      <div className='body-container'>
+      <div className="body-container">
         <div className="main-account-container">
           <div className="profile-info">
             <div>
@@ -58,7 +58,7 @@ const AccountInfo = () => {
         </div>
 
         <div className="other-container">
-          <form className="form" id='form'>
+          <form className="form" id="form">
             <label>
               First Name:
               <input
