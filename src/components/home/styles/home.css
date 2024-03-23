@@ -3,11 +3,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
   gap: 4rem;
   justify-content: center;
 }
 .logo {
   margin-right: 1rem;
+
 }
 .link- {
   color: white;
