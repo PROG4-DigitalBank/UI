@@ -24,7 +24,6 @@ function Homepage() {
           <Link to="/balance" className="link-">
             Balance
           </Link>
-
           <Link to="/balance-rep" className="link-">
             Deposit
           </Link>
