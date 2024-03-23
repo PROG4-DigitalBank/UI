@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
+import './styles/transfer.css'
 
 const Transfer = () => {
   // State pour stocker les détails du virement
@@ -83,3 +84,4 @@ const Transfer = () => {
 };
 
 export default Transfer;
+

@@ -27,6 +27,7 @@ const AccountInfo = () => {
             Deposit
           </Link>
           <Link to="/transfer" className="link-">
+
             Transfer
           </Link>
         </div>
@@ -36,6 +37,7 @@ const AccountInfo = () => {
           <button className="learn">Sign Up</button>
         </div>
       </div>
+
 
       <div className="body-container">
         <div className="main-account-container">
@@ -51,14 +53,18 @@ const AccountInfo = () => {
           </div>
 
           <div className="info">
+
             <p>Birth Date </p>
             <p>Net Month salary </p>
             <p>Account Number </p>
+
           </div>
         </div>
 
         <div className="other-container">
+
           <form className="form" id="form">
+
             <label>
               First Name:
               <input
