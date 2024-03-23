@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import axios from 'axios'
 import './styles/withdraw.css'
@@ -6,6 +5,7 @@ import image from './images/Study.jpg'
 import { Link } from 'react-router-dom'
 
 //F2: retrait d'argent
+
 
 
 const WithdrawMoney = () => {
@@ -37,7 +37,6 @@ const WithdrawMoney = () => {
 
   const handleActivateOverdraft = async () => {
     try {
-
       const response = await axios.post('url for overdraft activation', {
         account,
       })
@@ -50,28 +49,36 @@ const WithdrawMoney = () => {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="left-links">
-          <Link to="/business" className="link">
-            Business
+      <div className="nav">
+        <div className="nav-links">
+          <Link to="/">
+            <h1 className="logo">Digital Bank</h1>
           </Link>
-          <Link to="/pricing" className="link">
-            Pricing
+          <Link to="/" className="link-">
+            Home
           </Link>
-          <Link to="/features" className="link">
-            Features
+          <Link to="/account" className="link-">
+            Account Info
           </Link>
-          <Link to="/blog" className="link">
-            Blog
+          <Link to="/wmoney" className="link-">
+            Withdraw
+          </Link>
+          <Link to="/balance" className="link-">
+            Balance
+          </Link>
+          <Link to="/balance-rep" className="link-">
+            Deposit
+          </Link>
+          <Link to="/transfer" className="link-">
+            Transfer
           </Link>
         </div>
-        <div className="right-links">
-          <button className="up-button">Login</button>
-          <button className="up-button" id="signup-button">
-            Signup
-          </button>
+
+        <div className="buttons-container">
+          <button className="try">Login</button>
+          <button className="learn">Sign Up</button>
         </div>
-      </nav>
+      </div>
 
       <div className="main-container">
         <div className="title-withdraw">
@@ -133,5 +140,3 @@ const WithdrawMoney = () => {
 }
 
 export default WithdrawMoney
- 
-

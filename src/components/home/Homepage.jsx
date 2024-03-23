@@ -11,16 +11,24 @@ function Homepage() {
           <Link to="/">
             <h1 className="logo">Digital Bank</h1>
           </Link>
+          <Link to="/" className="link-">
+            Home
+          </Link>
           <Link to="/account" className="link-">
             Account Info
           </Link>
-          <Link to="/" className="link-">
+          <Link to="/wmoney" className="link-">
+
             Withdraw
           </Link>
           <Link to="/balance" className="link-">
             Balance
           </Link>
-          
+
+          <Link to="/balance-rep" className="link-">
+            Deposit
+          </Link>
+
           <Link to="/transfer" className="link-">
             Transfer
           </Link>
