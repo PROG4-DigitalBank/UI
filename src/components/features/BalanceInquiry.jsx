@@ -1,73 +1,87 @@
 import React, { useState, useEffect } from 'react'
 import './styles/balance.css'
 import { Link } from 'react-router-dom'
+//F3: Consulatation de solde
 
 const BalanceInquiry = () => {
-  // State variables to hold balances
-  const [principalBalance, setPrincipalBalance] = useState(0)
-  const [loanBalance, setLoanBalance] = useState(0)
-  const [loanInterest, setLoanInterest] = useState(0)
+  // State pour stocker les soldes
+  const [balances, setBalances] = useState({
+    principal: 0,
+    loans: 0,
+    loanInterests: 0,
+  })
 
-  // Function to fetch balances from backend
-  const fetchBalances = async () => {
-    // TO DO: Fetch balances from backend using API call
-    // Example:
-    // const response = await fetch('backend_url/balances');
-    // const data = await response.json();
-    // Update state with fetched data
-    // setPrincipalBalance(data.principal);
-    // setLoanBalance(data.loan);
-    // setLoanInterest(data.interest);
+  // State pour stocker la date sélectionnée
+  const [selectedDate, setSelectedDate] = useState(new Date())
+
+  // Fonction pour charger les soldes depuis le backend (à implémenter)
+  const fetchBalances = () => {
+    // TODO: Faire une requête au backend pour récupérer les soldes pour la date sélectionnée
+    // Assurez-vous que le backend renvoie un objet avec les clés 'principal', 'loans' et 'loanInterests'
+    // Exemple de format de réponse : { principal: 1000, loans: 500, loanInterests: 50 }
   }
 
-  // Function to format date as YYYY-MM-DD
-  const formatDate = (date) => {
-    // TO DO: Format date as needed
-    // Example:
-    // return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
-  }
-
+  // Effet pour charger les soldes lors du chargement initial et lors du changement de date
   useEffect(() => {
-    // Fetch balances when component mounts
     fetchBalances()
-  }, [])
+  }, [selectedDate]) // Cette dépendance garantit que le chargement est déclenché lors du changement de date
 
   return (
     <>
-      <nav className="navbar">
-        <div className="left-links">
-          <Link to="/business" className="link">
-            Business
+      <div className="nav">
+        <div className="nav-links">
+          <Link to="/">
+            <h1 className="logo">Digital Bank</h1>
           </Link>
-          <Link to="/pricing" className="link">
-            Pricing
+          <Link to="/" className="link-">
+            Home
           </Link>
-          <Link to="/features" className="link">
-            Features
+          <Link to="/account" className="link-">
+            Account Info
           </Link>
-          <Link to="/blog" className="link">
-            Blog
+          <Link to="/wmoney" className="link-">
+            Withdraw
+          </Link>
+          <Link to="/balance" className="link-">
+            Balance
+          </Link>
+          <Link to="/balance-rep" className="link-">
+            Deposit
+          </Link>
+          <Link to="/transfer" className="link-">
+            Transfer
           </Link>
         </div>
-        <div className="right-links">
-          <button className="up-button">Login</button>
-          <button className="up-button" id="signup-button">
-            Signup
-          </button>
+
+        <div className="buttons-container">
+          <button className="try">Login</button>
+          <button className="learn">Sign Up</button>
         </div>
-      </nav>
-      <div className="balance-inquiry-container">
-        <h2>Balance Inquiry</h2>
-        {/* Display principal balance */}
-        <p className="balance-item">Principal Balance: ${principalBalance}</p>
-        {/* Display loan balance */}
-        <p className="balance-item">Loan Balance: ${loanBalance}</p>
-        {/* Display loan interest */}
-        <p className="balance-item">Loan Interest: ${loanInterest}</p>
-        {/* Date selector component */}
-        <label className="date-label">Select Date:</label>
-        {/* TO DO: Implement date selector component */}
-        {/* <input type="date" onChange={(e) => handleDateChange(e.target.value)} /> */}
+      </div>
+      <div className="balance-container">
+        <h2>Balance</h2>
+        <div className="balance-details">
+          <div className="balance-item">
+            <span className="balance-label">Principal:</span>
+            <span className="balance-value">{balances.principal} MGA</span>
+          </div>
+          <div className="balance-item">
+            <span className="balance-label">Loans:</span>
+            <span className="balance-value">{balances.loans} MGA</span>
+          </div>
+          <div className="balance-item">
+            <span className="balance-label">Loan Interests:</span>
+            <span className="balance-value">{balances.loanInterests} MGA</span>
+          </div>
+        </div>
+        <div className="date-selector">
+          <label>Select Date:</label>
+          <input
+            type="date"
+            value={selectedDate.toISOString().split('T')[0]} // Format de date attendu par l'input type date
+            onChange={(e) => setSelectedDate(new Date(e.target.value))}
+          />
+        </div>
       </div>
     </>
   )
