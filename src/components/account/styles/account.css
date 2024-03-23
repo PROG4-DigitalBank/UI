@@ -8,6 +8,13 @@
   flex-direction: row;
   align-items: center;
   gap: 5rem;
+  border: #e4d3f6 solid 2px;
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  padding-right: 5rem;
+  border-radius: 10px;
+
 }
 
 .profile-info {
@@ -38,26 +45,25 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-.body-container{
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 18rem;
+.body-container {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 18rem;
 }
 
-.other-container{
-    width: max-content;
-    height: max-content;
-    padding: 1rem 2rem;
-    border: white solid 2px;
-    border-radius: 10px;
-    background-color: rgb(24, 24, 24);
+.other-container {
+  width: max-content;
+  height: max-content;
+  padding: 1rem 2rem;
+  border: white solid 2px;
+  border-radius: 10px;
+  background-color: rgb(24, 24, 24);
 }
 
-#form, #form label{
-    background-color: rgb(24, 24, 24);
+#form,
+#form label {
+  background-color: rgb(24, 24, 24);
 }
-
-
