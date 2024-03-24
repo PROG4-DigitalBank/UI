@@ -18,7 +18,6 @@ function Homepage() {
             Account Info
           </Link>
           <Link to="/wmoney" className="link-">
-
             Withdraw
           </Link>
           <Link to="/balance" className="link-">

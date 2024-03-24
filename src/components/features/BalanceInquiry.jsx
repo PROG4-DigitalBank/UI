@@ -80,7 +80,7 @@ const BalanceInquiry = () => {
             type="date"
             value={selectedDate.toISOString().split('T')[0]} // Format de date attendu par l'input type date
             onChange={(e) => setSelectedDate(new Date(e.target.value))}
-            className='date-input'
+            className="date-input"
           />
         </div>
       </div>
