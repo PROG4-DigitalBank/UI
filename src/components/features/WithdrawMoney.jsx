@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './styles/withdraw.css';
-import image from './images/Study.jpg';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import axios from 'axios'
+import './styles/withdraw.css'
+import image from './images/Study.jpg'
+import { Link } from 'react-router-dom'
 
 const WithdrawMoney = () => {
-  const [account, setAccount] = useState('');
-  const [amount, setAmount] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [message, setMessage] = useState('');
+  const [account, setAccount] = useState('')
+  const [amount, setAmount] = useState('')
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
       // Sending request to the backend to check if the withdrawal is authorized
       const response = await axios.post('url for withdrawal authorization', {
@@ -20,28 +20,28 @@ const WithdrawMoney = () => {
         amount,
         date,
         time,
-      });
+      })
 
       // Retrieving success or error message from the backend
-      setMessage(response.data.message);
+      setMessage(response.data.message)
     } catch (error) {
-      console.error('Error during request:', error);
+      console.error('Error during request:', error)
       // Error handling
-      setMessage('An error occurred while processing your request.');
+      setMessage('An error occurred while processing your request.')
     }
-  };
+  }
 
   const handleActivateOverdraft = async () => {
     try {
       const response = await axios.post('url for overdraft activation', {
         account,
-      });
+      })
       // Handle success or error response from the backend
     } catch (error) {
-      console.error('Error during overdraft activation:', error);
+      console.error('Error during overdraft activation:', error)
       // Error handling
     }
-  };
+  }
 
   return (
     <>
@@ -71,8 +71,11 @@ const WithdrawMoney = () => {
         </div>
 
         <div className="buttons-container">
-          <button className="try">Existing account</button>
-          <button className="learn">Sign Up</button>
+          <Link to="/accounts"></Link>
+          <button className="try">Existing Account</button>
+          <Link to="/signup">
+            <button className="learn">Sign Up</button>
+          </Link>
         </div>
       </div>
 
@@ -132,7 +135,7 @@ const WithdrawMoney = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default WithdrawMoney;
+export default WithdrawMoney
