@@ -10,6 +10,7 @@ import WithdrawMoney from './components/features/WithdrawMoney'
 import BalanceReplenishment from './components/features/BalanceReplenishment'
 import AccountInfo from './components/account/AccountInfo'
 import Transfer from './components/features/Transfer'
+
 function App() {
   return (
     <Router>
@@ -19,7 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/wmoney" element={<WithdrawMoney />} />
           <Route path="/balance" element={<BalanceInquiry />} />
-          <Route path="/balancerep" element={<BalanceReplenishment />} />
+          <Route path="/balance-rep" element={<BalanceReplenishment />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/account" element={<AccountInfo />} />
           <Route path="/transfer" element={<Transfer />} />

@@ -54,32 +54,36 @@ const BalanceInquiry = () => {
         </div>
 
         <div className="buttons-container">
-          <button className="try">Login</button>
-          <button className="learn">Sign Up</button>
+          <Link to="/accounts"></Link>
+          <button className="try">Existing Account</button>
+          <Link to="/signup">
+            <button className="learn">Sign Up</button>
+          </Link>
         </div>
       </div>
       <div className="balance-container">
         <h2>Balance</h2>
         <div className="balance-details">
           <div className="balance-item">
-            <span className="balance-label">Principal:</span>
+            <span className="balance-label">Principal: </span>
             <span className="balance-value">{balances.principal} MGA</span>
           </div>
           <div className="balance-item">
-            <span className="balance-label">Loans:</span>
+            <span className="balance-label">Loans: </span>
             <span className="balance-value">{balances.loans} MGA</span>
           </div>
           <div className="balance-item">
-            <span className="balance-label">Loan Interests:</span>
+            <span className="balance-label">Loan Interests: </span>
             <span className="balance-value">{balances.loanInterests} MGA</span>
           </div>
         </div>
         <div className="date-selector">
-          <label>Select Date:</label>
+          <label>Select Date: </label>
           <input
             type="date"
             value={selectedDate.toISOString().split('T')[0]} // Format de date attendu par l'input type date
             onChange={(e) => setSelectedDate(new Date(e.target.value))}
+            className="date-input"
           />
         </div>
       </div>

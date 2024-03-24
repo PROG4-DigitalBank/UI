@@ -1,9 +1,14 @@
 .balance-container {
-  background-color: #f0f0f0;
-  padding: 20px;
+  margin: 15rem auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border: white solid 1px;
+  width: max-content;
+  padding: 2rem 10rem;
+}
+
+.balance-container h2 {
+  margin-bottom: 2rem;
 }
 
 .balance-details {
@@ -21,6 +26,41 @@
 
 .date-selector {
   margin-top: 20px;
+}
+
+.date-input {
+  border: white solid 1px;
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 8px;
+}
+
+.replenishment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7rem auto;
+  gap: 2rem;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  padding: 2rem 3rem;
+  border: white solid 2px;
+  border-radius: 10px;
+}
+
+.replenishment-input {
+  width: 25rem;
+  border: white solid 1px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.replenishment-button {
+  padding: 1rem;
+  border: #c499f3 solid 1px;
+  border-radius: 8px;
+  background-color: #c499f3;
 }
 
 /* Ajoutez ici d'autres styles selon vos préférences */
