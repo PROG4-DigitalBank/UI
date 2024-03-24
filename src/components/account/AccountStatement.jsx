@@ -73,7 +73,6 @@ const AccountStatement = () => {
         </div>
       </div>
 
-      
       <div className="account-statement">
         <h2>Account Statement</h2>
         <table>

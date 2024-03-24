@@ -10,6 +10,7 @@ import AccountInfo from './components/account/AccountInfo'
 import Transfer from './components/features/Transfer'
 import AccountManagement from './components/account/AccountManagement'
 import AccountStatement from './components/account/AccountStatement'
+import TransactionCategorization from './components/transaction/TransactionCategorization'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/transfer" element={<Transfer />} />
           <Route path="/accounts" element={<AccountManagement />} />
           <Route path="/account-state" element={<AccountStatement />} />
+          <Route path="/transaction" element={<TransactionCategorization />} />
         </Routes>
       </div>
     </Router>
