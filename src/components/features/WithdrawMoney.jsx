@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './styles/withdraw.css';
-import image from './images/Study.jpg';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import axios from 'axios'
+import './styles/withdraw.css'
+import image from './images/Study.jpg'
+import { Link } from 'react-router-dom'
 
+//F2: retrait d'argent
 const WithdrawMoney = () => {
   const [account, setAccount] = useState('');
   const [amount, setAmount] = useState('');
@@ -12,7 +13,7 @@ const WithdrawMoney = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
       // Sending request to the backend to check if the withdrawal is authorized
       const response = await axios.post('url for withdrawal authorization', {
@@ -20,15 +21,16 @@ const WithdrawMoney = () => {
         amount,
         date,
         time,
-      });
+      })
+
       // Retrieving success or error message from the backend
-      setMessage(response.data.message);
+      setMessage(response.data.message)
     } catch (error) {
-      console.error('Error during request:', error);
+      console.error('Error during request:', error)
       // Error handling
-      setMessage('An error occurred while processing your request.');
+      setMessage('An error occurred while processing your request.')
     }
-  };
+  }
 
   const handleActivateOverdraft = async () => {
     try {
@@ -40,32 +42,40 @@ const WithdrawMoney = () => {
       console.error('Error during overdraft activation:', error);
       // Error handling
     }
-  };
+  }
 
   return (
     <>
-      <nav className="navbar">
-        <div className="left-links">
-          <Link to="/business" className="link">
-            Business
+      <div className="nav">
+        <div className="nav-links">
+          <Link to="/">
+            <h1 className="logo">Digital Bank</h1>
           </Link>
-          <Link to="/pricing" className="link">
-            Pricing
+          <Link to="/" className="link-">
+            Home
           </Link>
-          <Link to="/features" className="link">
-            Features
+          <Link to="/account" className="link-">
+            Account Info
           </Link>
-          <Link to="/blog" className="link">
-            Blog
+          <Link to="/wmoney" className="link-">
+            Withdraw
+          </Link>
+          <Link to="/balance" className="link-">
+            Balance
+          </Link>
+          <Link to="/balance-rep" className="link-">
+            Deposit
+          </Link>
+          <Link to="/transfer" className="link-">
+            Transfer
           </Link>
         </div>
-        <div className="right-links">
-          <button className="up-button">Login</button>
-          <button className="up-button" id="signup-button">
-            Signup
-          </button>
+
+        <div className="buttons-container">
+          <button className="try">Login</button>
+          <button className="learn">Sign Up</button>
         </div>
-      </nav>
+      </div>
 
       <div className="main-container">
         <div className="title-withdraw">
@@ -109,7 +119,7 @@ const WithdrawMoney = () => {
                 id="time"
               />
             </label>
-            <button type="submit" className="withdraw-button" id='red-button'>
+            <button type="submit" className="withdraw-button" id="red-button">
               Withdraw
             </button>
           </form>
@@ -126,4 +136,4 @@ const WithdrawMoney = () => {
   );
 };
 
-export default WithdrawMoney;
+export default WithdrawMoney

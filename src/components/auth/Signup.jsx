@@ -46,100 +46,110 @@ const Signup = () => {
 
   return (
     <>
-      <div className="all">
-        <nav className="navbar">
-          <div className="left-links">
-            <Link to="/business text-pop-up-top" className="link">
-              Business
-            </Link>
-            <Link to="/pricing" className="link">
-              Pricing
-            </Link>
-            <Link to="/features" className="link">
-              Features
-            </Link>
-            <Link to="/blog" className="link">
-              Blog
-            </Link>
-          </div>
-          <div className="right-links">
-            <button className="up-button">Login</button>
+      <div className="nav">
+        <div className="nav-links">
+          <Link to="/">
+            <h1 className="logo">Digital Bank</h1>
+          </Link>
+          <Link to="/" className="link-">
+            Home
+          </Link>
+          <Link to="/account" className="link-">
+            Account Info
+          </Link>
+          <Link to="/wmoney" className="link-">
+            Withdraw
+          </Link>
+          <Link to="/balance" className="link-">
+            Balance
+          </Link>
 
-            <button className="up-button" id="signup-button">
-              Signup
-            </button>
-          </div>
-        </nav>
+          <Link to="/balance-rep" className="link-">
+            Deposit
+          </Link>
 
-        <div className="main">
-          <h1 className="title">Bank Account Management</h1>
-          <p className="information-text">
-            Please enter your details to continue subscription
-          </p>
-          <form onSubmit={handleSubmit} className="form">
-            <label>
-              First Name:
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="input-text"
-              />
-            </label>
-            <label>
-              Last Name:
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="input-text"
-              />
-            </label>
-            <label>
-              Date of Birth:
-              <input
-                type="date"
-                name="dateOfBirth"
-                value={formData.dateOfBirth}
-                onChange={handleChange}
-                required
-                className="input-text"
-              />
-            </label>
-            <label>
-              Salary:
-              <input
-                type="number"
-                name="salary"
-                value={formData.salary}
-                onChange={handleChange}
-                required
-                className="input-text"
-                id="salary"
-              />
-            </label>
-            <label>
-              Acc Number :
-              <input
-                type="text"
-                name="accountNumber"
-                value={formData.accountNumber}
-                onChange={handleChange}
-                required
-                className="input-text"
-                id="acc-number"
-              />
-            </label>
-            <button type="submit" className="submit">
-              Submit
-            </button>
-          </form>
-          {/* TODO: Display existing accounts and allow modification */}
+          <Link to="/transfer" className="link-">
+            Transfer
+          </Link>
         </div>
+
+        <div className="buttons-container">
+          <Link to="/accounts"></Link>
+          <button className="try">Existing Account</button>
+          <Link to="/signup">
+            <button className="learn">Sign Up</button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="main">
+        <h1 className="title">Bank Account Management</h1>
+        <p className="information-text">
+          Please enter your details to continue subscription
+        </p>
+        <form onSubmit={handleSubmit} className="form">
+          <label>
+            First Name:
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+              className="input-text"
+            />
+          </label>
+          <label>
+            Last Name:
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+              className="input-text"
+            />
+          </label>
+          <label>
+            Date of Birth:
+            <input
+              type="date"
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
+              onChange={handleChange}
+              required
+              className="input-text"
+            />
+          </label>
+          <label>
+            Salary:
+            <input
+              type="number"
+              name="salary"
+              value={formData.salary}
+              onChange={handleChange}
+              required
+              className="input-text"
+              id="salary"
+            />
+          </label>
+          <label>
+            Acc Number :
+            <input
+              type="text"
+              name="accountNumber"
+              value={formData.accountNumber}
+              onChange={handleChange}
+              required
+              className="input-text"
+              id="acc-number"
+            />
+          </label>
+          <button type="submit" className="submit">
+            Submit
+          </button>
+        </form>
+        {/* TODO: Display existing accounts and allow modification */}
       </div>
     </>
   )
