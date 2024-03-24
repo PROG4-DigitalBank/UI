@@ -90,7 +90,8 @@ const AccountManagement = () => {
 
         <div className="buttons-container">
           <Link to="/accounts">
-          <button className="try">Existing Account</button></Link>
+            <button className="try">Existing Account</button>
+          </Link>
           <Link to="/signup">
             <button className="learn">Sign Up</button>
           </Link>
@@ -128,7 +129,9 @@ const AccountManagement = () => {
         </div>
 
         <div>
-            <Link to='/signup'><button className='new-account'>Add New Account</button></Link>
+          <Link to="/signup">
+            <button className="new-account">Add New Account</button>
+          </Link>
         </div>
       </div>
     </>

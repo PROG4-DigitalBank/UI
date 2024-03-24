@@ -9,6 +9,7 @@ import BalanceReplenishment from './components/features/BalanceReplenishment'
 import AccountInfo from './components/account/AccountInfo'
 import Transfer from './components/features/Transfer'
 import AccountManagement from './components/account/AccountManagement'
+import AccountStatement from './components/account/AccountStatement'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/account" element={<AccountInfo />} />
           <Route path="/transfer" element={<Transfer />} />
           <Route path="/accounts" element={<AccountManagement />} />
+          <Route path="/account-state" element={<AccountStatement />} />
         </Routes>
       </div>
     </Router>

@@ -33,7 +33,8 @@ const AccountInfo = () => {
 
         <div className="buttons-container">
           <Link to="/accounts">
-          <button className="try">Existing Account</button></Link>
+            <button className="try">Existing Account</button>
+          </Link>
           <Link to="/signup">
             <button className="learn">Sign Up</button>
           </Link>
@@ -50,6 +51,12 @@ const AccountInfo = () => {
             <div className="name">
               <p id="first-name">First Name : </p>
               <p>Last Name : </p>
+            </div>
+
+            <div>
+              <Link to="/account-state">
+                <button className="new-acc">View Account Statement</button>
+              </Link>
             </div>
           </div>
 

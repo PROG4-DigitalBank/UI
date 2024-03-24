@@ -34,7 +34,9 @@ function Homepage() {
         </div>
 
         <div className="buttons-container">
-          <Link to="/accounts"><button className="try">Existing Account</button></Link>
+          <Link to="/accounts">
+            <button className="try">Existing Account</button>
+          </Link>
           <Link to="/signup">
             <button className="learn">Sign Up</button>
           </Link>
