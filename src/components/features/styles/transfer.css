@@ -1,0 +1,40 @@
+.transfer-container {
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(187, 76, 76, 0.1);
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    padding: 1rem;
+    border: white solid 2px;
+
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 30rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.transfer-button{
+    padding: 0.75rem 3rem;
+    border: #c499f3 solid 1px;
+    background-color: #c499f3;
+    border-radius: 5px;
+    margin-top: 1rem;
+}

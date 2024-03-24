@@ -1,0 +1,38 @@
+.balance-container {
+  margin: 15rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: white solid 1px;
+  width: max-content;
+  padding: 2rem 10rem;
+}
+
+.balance-container h2{
+  margin-bottom: 2rem;
+}
+
+.balance-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-item {
+  margin-bottom: 10px;
+}
+
+.balance-label {
+  font-weight: bold;
+}
+
+.date-selector {
+  margin-top: 20px;
+}
+
+.date-input{
+  border: white solid 1px;
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 8px;
+}
+
+/* Ajoutez ici d'autres styles selon vos préférences */

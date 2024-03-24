@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .all {
@@ -51,7 +52,7 @@
   animation: slideIn 1s ease;
 }
 
-.link::before{
+.link::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -63,19 +64,18 @@
   transition: transform 0.3s ease;
 }
 
-.link:hover::before{
+.link:hover::before {
   transform: scaleX(1);
 }
 
 @keyframes slideIn {
-  0%{
+  0% {
     transform: translateY(-100%);
   }
 
-  100%{
+  100% {
     transform: translateY(0);
   }
-  
 }
 
 @keyframes buttonZoomIn {
@@ -86,8 +86,6 @@
     transform: scale(1.1);
   }
 }
-
-
 
 .left-links,
 .right-links {
@@ -129,9 +127,8 @@
   padding: 0.75rem 0.75rem;
   border-radius: 10px;
   color: white;
-  background-color: #D0021B;
-  font-size: medium;
-  margin-left: 7rem;
+  background-color: #c499f3;
+  border: #c499f3 solid;
 }
 
 .main {
@@ -145,6 +142,9 @@
   width: max-content;
   height: max-content;
   padding: 2rem 10rem 2rem 10rem;
+  backdrop-filter: blur(21px) saturate(118%);
+  -webkit-backdrop-filter: blur(21px) saturate(118%);
+  background-color: rgba(255, 255, 255, 0.69);
   backdrop-filter: blur(21px) saturate(118%);
   -webkit-backdrop-filter: blur(21px) saturate(118%);
   background-color: rgba(255, 255, 255, 0.69);
