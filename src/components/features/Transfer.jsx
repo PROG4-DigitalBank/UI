@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/transfer.css'
+// F5 : Virement
 
 const Transfer = () => {
   // State pour stocker les détails du virement
@@ -53,14 +53,13 @@ const Transfer = () => {
         </div>
       </div>
 
-
       <div className="transfer-container">
         <h2>Make a Transfer</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Recipient:</label>
             <input
-              className='transfer-input'
+              className="transfer-input"
               type="text"
               value={transferDetails.recipient}
               onChange={(e) =>
@@ -70,7 +69,6 @@ const Transfer = () => {
                 })
               }
               required
-              
             />
           </div>
 
@@ -86,7 +84,7 @@ const Transfer = () => {
                 })
               }
               required
-              className='transfer-input'
+              className="transfer-input"
             />
           </div>
           <div className="form-group">
@@ -98,7 +96,7 @@ const Transfer = () => {
                 setTransferDetails({ ...transferDetails, date: e.target.value })
               }
               required
-              className='transfer-input'
+              className="transfer-input"
             />
           </div>
           <div className="form-group">
@@ -113,7 +111,7 @@ const Transfer = () => {
                 })
               }
               required
-              className='transfer-input'
+              className="transfer-input"
             />
           </div>
           <div className="form-group">
@@ -127,15 +125,16 @@ const Transfer = () => {
                   label: e.target.value,
                 })
               }
-              className='transfer-input'
+              className="transfer-input"
             />
           </div>
-          <button type="submit" className='transfer-button'>Transfer</button>
+          <button type="submit" className="transfer-button">
+            Transfer
+          </button>
         </form>
       </div>
     </>
   )
 }
 
-export default Transfer;
-
+export default Transfer

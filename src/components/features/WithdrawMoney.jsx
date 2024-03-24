@@ -4,7 +4,6 @@ import './styles/withdraw.css'
 import image from './images/Study.jpg'
 import { Link } from 'react-router-dom'
 
-//F2: retrait d'argent
 const WithdrawMoney = () => {
   const [account, setAccount] = useState('')
   const [amount, setAmount] = useState('')
@@ -73,8 +72,11 @@ const WithdrawMoney = () => {
         </div>
 
         <div className="buttons-container">
-          <button className="try">Login</button>
-          <button className="learn">Sign Up</button>
+          <Link to="/accounts"></Link>
+          <button className="try">Existing Account</button>
+          <Link to="/signup">
+            <button className="learn">Sign Up</button>
+          </Link>
         </div>
       </div>
 
