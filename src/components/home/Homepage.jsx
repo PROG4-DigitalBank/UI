@@ -34,7 +34,7 @@ function Homepage() {
         </div>
 
         <div className="buttons-container">
-          <button className="try">Login</button>
+          <button className="try">Existing Account</button>
           <button className="learn">Sign Up</button>
         </div>
       </div>
