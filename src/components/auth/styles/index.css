@@ -31,19 +31,19 @@
   background-color: #fff;
   color: black;
   cursor: pointer;
-  background-color: #D0021B;
+  background-color: #d0021b;
   color: white;
 }
 
-.up-button:hover, .submit:hover{
+.up-button:hover,
+.submit:hover {
   animation: buttonZoomIn 1s ease;
 }
 
-#signup-button{
+#signup-button {
   background-color: white;
   color: black;
   border: white solid 2px;
-
 }
 
 .link {
