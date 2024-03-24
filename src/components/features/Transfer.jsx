@@ -178,7 +178,6 @@ const Transfer = () => {
               }
             />
           </div>
-
           <button type="submit" className="transfer-button">
             Transfer
           </button>
