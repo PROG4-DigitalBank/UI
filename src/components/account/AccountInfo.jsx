@@ -39,7 +39,7 @@ const AccountInfo = () => {
           </Link>
         </div>
       </div>
-      
+
       <div className="body-container">
         <div className="main-account-container">
           <div className="profile-info">
