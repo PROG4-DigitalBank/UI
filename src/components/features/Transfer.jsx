@@ -178,14 +178,13 @@ const Transfer = () => {
               }
             />
           </div>
-
           <button type="submit" className="transfer-button">
             Transfer
           </button>
         </form>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Transfer
+export default Transfer;
