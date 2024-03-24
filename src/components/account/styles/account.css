@@ -66,3 +66,47 @@
 #form label {
   background-color: rgb(24, 24, 24);
 }
+
+
+/* */
+
+.account-management {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.account-form {
+  margin-bottom: 30px;
+}
+
+.account-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.account-form label {
+  display: block;
+}
+
+.account-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.account-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-list th, .account-list td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.account-list th {
+  background-color: #f2f2f2;
+}
