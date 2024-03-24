@@ -1,6 +1,5 @@
 import './App.css'
 import './components/auth/Signup'
-import './components/auth/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Homepage from './components/home/Homepage'
 import Signup from './components/auth/Signup'
@@ -23,11 +22,11 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/account" element={<AccountInfo />} />
           <Route path="/transfer" element={<Transfer />} />
-          <Route path="/account-management" element={<AccountManagement />} />
+          <Route path="/accounts" element={<AccountManagement />} />
         </Routes>
       </div>
     </Router>
   )
 }
 
-export default App;
+export default App
