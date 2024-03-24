@@ -35,7 +35,7 @@
   border-radius: 8px;
 }
 
-.replenishment-container{
+.replenishment-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,14 +49,14 @@
   border-radius: 10px;
 }
 
-.replenishment-input{
+.replenishment-input {
   width: 25rem;
   border: white solid 1px;
   border-radius: 8px;
   padding: 10px;
 }
 
-.replenishment-button{
+.replenishment-button {
   padding: 1rem;
   border: #c499f3 solid 1px;
   border-radius: 8px;

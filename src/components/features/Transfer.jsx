@@ -1,24 +1,25 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './styles/transfer.css'
-// F5 : Virement
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './styles/transfer.css';
 
 const Transfer = () => {
-  // State pour stocker les détails du virement
   const [transferDetails, setTransferDetails] = useState({
     recipient: '',
     amount: '',
     date: '',
     scheduledDate: '',
     label: '',
-  })
+    sameBank: true,
+    isGroupTransfer: false,
+    isScheduled: false,
+  });
 
-  // Fonction pour gérer la soumission du formulaire de virement
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // TODO: Envoyer les détails du virement au backend pour traitement
-    // Assurez-vous d'envoyer les données telles que 'recipient', 'amount', 'date', 'scheduledDate', 'label'
-  }
+    e.preventDefault();
+    // Envoi des détails du virement au backend pour traitement
+    // Assurez-vous d'envoyer les données telles que 'recipient', 'amount', 'date', 'scheduledDate', 'label', 'sameBank', 'isGroupTransfer', 'isScheduled'
+    console.log('Transfer details:', transferDetails);
+  };
 
   return (
     <>
@@ -90,6 +91,7 @@ const Transfer = () => {
               className="transfer-input"
             />
           </div>
+
           <div className="form-group">
             <label>Date:</label>
             <input
@@ -102,6 +104,7 @@ const Transfer = () => {
               className="transfer-input"
             />
           </div>
+
           <div className="form-group">
             <label>Scheduled Date:</label>
             <input
@@ -117,6 +120,7 @@ const Transfer = () => {
               className="transfer-input"
             />
           </div>
+
           <div className="form-group">
             <label>Label:</label>
             <input
@@ -131,13 +135,56 @@ const Transfer = () => {
               className="transfer-input"
             />
           </div>
+
+          <div className="form-group">
+            <label>Same Bank:</label>
+            <input
+              type="checkbox"
+              checked={transferDetails.sameBank}
+              onChange={(e) =>
+                setTransferDetails({
+                  ...transferDetails,
+                  sameBank: e.target.checked,
+                })
+              }
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Group Transfer:</label>
+            <input
+              type="checkbox"
+              checked={transferDetails.isGroupTransfer}
+              onChange={(e) =>
+                setTransferDetails({
+                  ...transferDetails,
+                  isGroupTransfer: e.target.checked,
+                })
+              }
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Scheduled:</label>
+            <input
+              type="checkbox"
+              checked={transferDetails.isScheduled}
+              onChange={(e) =>
+                setTransferDetails({
+                  ...transferDetails,
+                  isScheduled: e.target.checked,
+                })
+              }
+            />
+          </div>
+
           <button type="submit" className="transfer-button">
             Transfer
           </button>
         </form>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Transfer
+export default Transfer;

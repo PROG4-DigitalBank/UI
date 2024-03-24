@@ -62,8 +62,7 @@ function BalanceReplenishment() {
         </div>
       </div>
 
-
-      <div className='replenishment-container'>
+      <div className="replenishment-container">
         <h1>Balance Replenishment</h1>
         <div>
           <label htmlFor="amount">Amount: </label>
@@ -74,7 +73,7 @@ function BalanceReplenishment() {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
-            className='replenishment-input'
+            className="replenishment-input"
           />
         </div>
         <div>
@@ -86,7 +85,7 @@ function BalanceReplenishment() {
             value={reason}
             onChange={(e) => setReason(e.target.value)}
             required
-            className='replenishment-input'
+            className="replenishment-input"
           />
         </div>
         <div>
@@ -97,7 +96,7 @@ function BalanceReplenishment() {
             value={effectDate}
             onChange={(e) => setEffectDate(e.target.value)}
             required
-            className='replenishment-input'
+            className="replenishment-input"
           />
         </div>
         <div>
@@ -108,13 +107,15 @@ function BalanceReplenishment() {
             value={registrationDate}
             onChange={(e) => setRegistrationDate(e.target.value)}
             required
-            className='replenishment-input'
+            className="replenishment-input"
           />
         </div>
-        <button onClick={performReplenishment} className='replenishment-button'>Approvisionnement</button>
+        <button onClick={performReplenishment} className="replenishment-button">
+          Approvisionnement
+        </button>
       </div>
     </>
   )
 }
 
-export default BalanceReplenishment;
+export default BalanceReplenishment
