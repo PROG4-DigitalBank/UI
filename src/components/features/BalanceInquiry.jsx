@@ -52,7 +52,7 @@ const BalanceInquiry = () => {
             Transfer
           </Link>
         </div>
-        
+
         <div className="buttons-container">
           <Link to="/accounts"></Link>
           <button className="try">Existing Account</button>
