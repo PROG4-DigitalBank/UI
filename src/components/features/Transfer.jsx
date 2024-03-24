@@ -48,8 +48,11 @@ const Transfer = () => {
         </div>
 
         <div className="buttons-container">
-          <button className="try">Login</button>
-          <button className="learn">Sign Up</button>
+          <Link to="/accounts"></Link>
+          <button className="try">Existing Account</button>
+          <Link to="/signup">
+            <button className="learn">Sign Up</button>
+          </Link>
         </div>
       </div>
 
