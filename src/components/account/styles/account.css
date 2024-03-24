@@ -2,7 +2,9 @@
   width: 15rem;
   margin-bottom: 2rem;
 }
-
+.acoount-button-container {
+  margin-top: 2rem;
+}
 .main-account-container {
   display: flex;
   flex-direction: row;
@@ -65,4 +67,97 @@
 #form,
 #form label {
   background-color: rgb(24, 24, 24);
+}
+
+/* */
+
+.account-management {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 20px;
+}
+
+.account-form {
+  margin-bottom: 30px;
+}
+
+.account-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.account-form label {
+  display: block;
+}
+
+.account-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.account-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-list th,
+.account-list td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.new-account,
+.new-acc {
+  padding: 1rem;
+  border-radius: 10px;
+  border: #c499f3 solid 1px;
+  background-color: #c499f3;
+  cursor: pointer;
+}
+
+.new-acc {
+  margin-top: 2rem;
+}
+/* */
+
+.account-statement {
+  font-family: Arial, sans-serif;
+  margin-top: 5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dashboard-button{
+  margin-left: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-container-dash{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 7rem;
 }

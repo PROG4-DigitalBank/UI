@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/transfer.css';
+=======
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import './styles/transfer.css'
+>>>>>>> main
 
 const Transfer = () => {
   const [transferDetails, setTransferDetails] = useState({
@@ -12,6 +18,7 @@ const Transfer = () => {
     sameBank: true,
     isGroupTransfer: false,
     isScheduled: false,
+<<<<<<< HEAD
   });
 
   const handleSubmit = (e) => {
@@ -20,6 +27,16 @@ const Transfer = () => {
     // Assurez-vous d'envoyer les données telles que 'recipient', 'amount', 'date', 'scheduledDate', 'label', 'sameBank', 'isGroupTransfer', 'isScheduled'
     console.log('Transfer details:', transferDetails);
   };
+=======
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Envoi des détails du virement au backend pour traitement
+    // Assurez-vous d'envoyer les données telles que 'recipient', 'amount', 'date', 'scheduledDate', 'label', 'sameBank', 'isGroupTransfer', 'isScheduled'
+    console.log('Transfer details:', transferDetails)
+  }
+>>>>>>> main
 
   return (
     <>
@@ -49,8 +66,9 @@ const Transfer = () => {
         </div>
 
         <div className="buttons-container">
-          <Link to="/accounts"></Link>
-          <button className="try">Existing Account</button>
+          <Link to="/accounts">
+            <button className="try">Existing Account</button>
+          </Link>
           <Link to="/signup">
             <button className="learn">Sign Up</button>
           </Link>
