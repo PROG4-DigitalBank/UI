@@ -118,6 +118,7 @@
   border-radius: 10px;
   border: #c499f3 solid 1px;
   background-color: #c499f3;
+  cursor: pointer;
 }
 
 .new-acc {
@@ -145,4 +146,18 @@ td {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.dashboard-button{
+  margin-left: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-container-dash{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 7rem;
 }
