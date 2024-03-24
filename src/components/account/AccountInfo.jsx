@@ -53,9 +53,12 @@ const AccountInfo = () => {
               <p>Last Name : </p>
             </div>
 
-            <div>
+            <div className='button-container-dash'>
               <Link to="/account-state">
                 <button className="new-acc">View Account Statement</button>
+              </Link>
+              <Link to='/dashboard'>
+                <button className='new-acc dashboard-button'> Dashboard</button>
               </Link>
             </div>
           </div>

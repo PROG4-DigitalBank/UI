@@ -11,6 +11,7 @@ import Transfer from './components/features/Transfer'
 import AccountManagement from './components/account/AccountManagement'
 import AccountStatement from './components/account/AccountStatement'
 import TransactionCategorization from './components/transaction/TransactionCategorization'
+import Dashboard from './components/dashboard/Dashboard'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/accounts" element={<AccountManagement />} />
           <Route path="/account-state" element={<AccountStatement />} />
           <Route path="/transaction" element={<TransactionCategorization />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
