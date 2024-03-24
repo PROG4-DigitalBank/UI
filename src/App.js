@@ -20,7 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/wmoney" element={<WithdrawMoney />} />
           <Route path="/balance" element={<BalanceInquiry />} />
-          <Route path="/balancerep" element={<BalanceReplenishment />} />
+          <Route path="/balance-rep" element={<BalanceReplenishment />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/account" element={<AccountInfo />} />
           <Route path="/transfer" element={<Transfer />} />
