@@ -1,104 +1,64 @@
-import React, { useState, useEffect } from 'react'
-import './styles/account.css'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import './styles/account.css';
+import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import axios for API requests
 
 const AccountManagement = () => {
-  const [accounts, setAccounts] = useState([])
+  const [accounts, setAccounts] = useState([]);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     dateOfBirth: '',
     salary: '',
     accountNumber: '',
-  })
+  });
 
   // Function to fetch existing accounts from backend
-  const fetchExistingAccounts = () => {
-    // TODO: Fetch existing accounts from backend
-    // Example: axios.get('/api/accounts').then(response => setAccounts(response.data));
-    // Replace this mock data with actual API call
-    const mockAccounts = [
-      {
-        id: 1,
-        firstName: 'John',
-        lastName: 'Doe',
-        dateOfBirth: '1990-05-15',
-        salary: 5000,
-        accountNumber: 'AC12345678',
-      },
-      {
-        id: 2,
-        firstName: 'Alice',
-        lastName: 'Smith',
-        dateOfBirth: '1985-12-20',
-        salary: 6000,
-        accountNumber: 'AC98765432',
-      },
-    ]
-    setAccounts(mockAccounts)
-  }
+  const fetchExistingAccounts = async () => {
+    try {
+      const response = await axios.get('/accounts/all'); // Assuming your backend endpoint is /accounts/all
+      setAccounts(response.data);
+    } catch (error) {
+      console.error('Error fetching accounts:', error);
+    }
+  };
 
   useEffect(() => {
-    fetchExistingAccounts()
-  }, [])
+    fetchExistingAccounts();
+  }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    // TODO: Send formData to backend for processing (create or update account)
-    console.log('Form data:', formData)
-    // Reset form after submission
-    setFormData({
-      firstName: '',
-      lastName: '',
-      dateOfBirth: '',
-      salary: '',
-      accountNumber: '',
-    })
-  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      // Send formData to backend for creating a new account
+      await axios.post('/accounts/create', formData); 
+      console.log('New account created successfully!');
+      // Refetch the accounts after creating a new one
+      fetchExistingAccounts();
+      // Reset form after submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        dateOfBirth: '',
+        salary: '',
+        accountNumber: '',
+      });
+    } catch (error) {
+      console.error('Error creating account:', error);
+    }
+  };
 
   const handleChange = (event) => {
-    const { name, value } = event.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <>
-      <div className="nav">
-        <div className="nav-links">
-          <Link to="/">
-            <h1 className="logo">Digital Bank</h1>
-          </Link>
-          <Link to="/" className="link-">
-            Home
-          </Link>
-          <Link to="/account" className="link-">
-            Account Info
-          </Link>
-          <Link to="/wmoney" className="link-">
-            Withdraw
-          </Link>
-          <Link to="/balance" className="link-">
-            Balance
-          </Link>
-          <Link to="/balance-rep" className="link-">
-            Deposit
-          </Link>
-          <Link to="/transfer" className="link-">
-            Transfer
-          </Link>
-        </div>
-
-        <div className="buttons-container">
-          <Link to="/accounts">
-            <button className="try">Existing Account</button>
-          </Link>
-          <Link to="/signup">
-            <button className="learn">Sign Up</button>
-          </Link>
-        </div>
-      </div>
+      {/* Your navigation bar JSX */}
       <div className="account-management">
         <h1 className="account-title">Account Management</h1>
+        {/* Existing Accounts */}
         <div className="account-list">
           <h2>Existing Accounts</h2>
           <br />
@@ -128,14 +88,21 @@ const AccountManagement = () => {
           </table>
         </div>
 
+        {/* Add New Account Form */}
         <div>
-          <Link to="/signup">
-            <button className="new-account">Add New Account</button>
-          </Link>
+          <h2>Add New Account</h2>
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" />
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" />
+            <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} placeholder="Date of Birth" />
+            <input type="number" name="salary" value={formData.salary} onChange={handleChange} placeholder="Salary" />
+            <input type="text" name="accountNumber" value={formData.accountNumber} onChange={handleChange} placeholder="Account Number" />
+            <button type="submit">Create Account</button>
+          </form>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AccountManagement
+export default AccountManagement;
