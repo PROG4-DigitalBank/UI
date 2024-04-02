@@ -1,76 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import './styles/account.css'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import './styles/account.css';
+import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import axios for API calls
 
 const AccountStatement = () => {
-  // Mock data for demonstration
-  const [transactions, setTransactions] = useState([
-    {
-      date: '11/03/2024',
-      reference: 'VIR_2024_03_11_01',
-      description: 'Salaire',
-      debit: '0',
-      credit: '1,000,000',
-      balance: '950,000',
-    },
-    {
-      date: '10/03/2024',
-      reference: 'VIR_2024_03_10_02',
-      description: 'Billet SMATCHIN',
-      debit: '100,000',
-      credit: '0',
-      balance: '-50,000',
-    },
-    {
-      date: '10/03/2024',
-      reference: 'VIR_2024_03_10_01',
-      description: 'Retrait auprès de MCB',
-      debit: '0',
-      credit: '50,000',
-      balance: '50,000',
-    },
-  ])
+  const [transactions, setTransactions] = useState([]);
 
-  // Fetch transactions from backend - TO DO
+  // Fetch transactions from backend
   useEffect(() => {
-    // Your fetch code here to get transactions from backend
-  }, [])
+    axios.get('/transactions/accountNumber').then((response) => {
+      setTransactions(response.data);
+    }).catch((error) => {
+      console.error('Error fetching transactions:', error);
+    });
+  }, []);
 
   return (
     <>
       <div className="nav">
-        <div className="nav-links">
-          <Link to="/">
-            <h1 className="logo">Digital Bank</h1>
-          </Link>
-          <Link to="/" className="link-">
-            Home
-          </Link>
-          <Link to="/account" className="link-">
-            Account Info
-          </Link>
-          <Link to="/wmoney" className="link-">
-            Withdraw
-          </Link>
-          <Link to="/balance" className="link-">
-            Balance
-          </Link>
-          <Link to="/balance-rep" className="link-">
-            Deposit
-          </Link>
-          <Link to="/transfer" className="link-">
-            Transfer
-          </Link>
-        </div>
-
-        <div className="buttons-container">
-          <Link to="/accounts">
-            <button className="try">Existing Account</button>
-          </Link>
-          <Link to="/signup">
-            <button className="learn">Sign Up</button>
-          </Link>
-        </div>
+        {/* Navigation links */}
       </div>
 
       <div className="account-statement">
@@ -101,7 +49,7 @@ const AccountStatement = () => {
         </table>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AccountStatement
+export default AccountStatement;
